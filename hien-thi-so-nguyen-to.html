@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<!--<input id="num">-->
+<!--<button onclick="hienSoNguyenTo()">Ấn</button>-->
+<!--<p id="result"></p>-->
+<script>
+    // let num = document.getElementById("num");
+    // let result = document.getElementById("result");
+    //
+    // function hienSoNguyenTo() {
+        let text = "";
+        let n = 2;
+        let count = 0;
+        for (;count < +20;) {
+            if (n === 2) {
+                text = text + " " + n;
+                n ++;
+                count ++;
+            }
+            else {
+                let snt = true;
+                for (let i = 2; i < n; i++) {
+                    if (n % i === 0) {
+                        snt = false;
+                        n ++;
+                        break;
+                    }
+                }
+                if (snt === true) {
+                    snt = 0;
+                    text = text + "," + n;
+                    n ++;
+                    count ++;
+                }
+            }
+        }
+        document.write( "Chuỗi số nguyên tố: " + text);
+    // document.getElementById('result').innerHTML = "Chuỗi số nguyên tố : " +text;
+    // }
+</script>
+</body>
+</html>
